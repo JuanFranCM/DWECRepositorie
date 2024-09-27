@@ -11,34 +11,43 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
-<body>
-    <!--Poner foto personal en esquina-->
-    <!-------------------Header----------------->
-    <div class="header">
-        <div class="titulo">
-            <h3>Fundamentos de js</h3>
-            <h4>Desarrollo WEB en entorno del cliente</h4>
-            <h5>Portfolio</h5>
-        </div>
 
-        <div class="picture">
-            <picture></picture>
-        </div>
+
+<body>
+  <!-------------------Header----------------->
+  <div class="header container-fluid text-center">
+    <div class="row">
+
+      <div class="col-12 col-md-4">
+        <img src="../../img/js.png" class="img-thumbnail imagen" alt="Js">
+      </div>
+
+      <div class="titulo col-12 col-md-4">
+        <h3>Fundamentos de JS</h3>
+        <h4>Desarrollo WEB en entorno del cliente</h4>
+      </div>
+
+      <div class="col col-12-md-4">
+        <img src="../../img/photo.jpg" class="img-thumbnail imagen" alt="Foto de perfil">
+      </div>
 
     </div>
+  </div>
 
 
-    <!------------------Menu-------------------->
 
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    
+  <!------------------Navbar-------------------->
+
+  <nav class="navbar navbar-expand-lg">
+
     <div class="container-fluid">
-      
-      <a class="navbar-brand" href="../../index.html">Inicio</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+      <a class="navbar-brand text-light" href="../../index.html">Inicio</a>
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      
+
+
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
@@ -62,22 +71,24 @@
             <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Actividades
             </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Actividad 1</a></li>
-              <li><a class="dropdown-item" href="#">Actividad 2</a></li>
+            <ul class="dropdown-menu desplegable">
+              <li><a class="dropdown-item" href="./index.html">Actividad 1</a></li>
+              <li><a class="dropdown-item" href="../ejercicio02/index.html">Actividad 2</a></li>
             </ul>
           </li>
 
         </ul>
-
       </div>
+
 
     </div>
 
   </nav>
 
 
-    <!------------------Main content------------->
+
+
+  <!------------------Main content------------->
 
     <div class="container">
 
@@ -90,7 +101,7 @@
             <p class="card-text">Indicaciones del ejercicio 01</p>
             <p class="card-text">Resultado:</p>
             <p class="card-text" id="resultado" name="01" >(Aquí mostraremos el <strong>resultado</strong> del ejercicio 01)</p>
-            <a href="../../index.html" class="btn btn-primary">Página principal</a>
+            <a href="../../index.html" class="btn botEj">Página principal</a>
           </div>
       </div>
 
