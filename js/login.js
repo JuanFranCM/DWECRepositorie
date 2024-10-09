@@ -8,22 +8,75 @@ const mainContent = document.getElementById("contenidoCompleto");
 
 const userInput = document.getElementById("username");
 const password = document.getElementById("password");
-const submitButton = loginForm.querySelector('input[type="button"]');
+const submitButton = document.getElementById("submit");
 
-submitButton.addEventListener("click", function () {
+const cerrarSesion = document.getElementById("logout");
 
-    const userValue = userInput.value;
-    const passwordValue = password.value;
+const cookieActual = getCookieFor("loggedIn");
 
-    if ((userValue === correctUser) && (passwordValue===correctPassword)){
-        alert("Bienvenido");
-        document.getElementById("contenidoCompleto").style.display="block";
-        document.getElementById("loginForm").style.display="none";
+/* event.preventDefault(); */
+if ( cookieActual ==="true"){
 
-    }else{
-        alert("Credenciales incorrectos")
-    }
-})
+    /* mostrarContenido(); */
+    document.getElementById("contenidoCompleto").style.display="block";
+
+    /* ocultarLogin(); */
+    document.getElementById("loginForm").style.display="none";
+    
+    /* document.getElementById("contenidoCompleto").style.display="block";
+    document.getElementById("loginForm").style.display="none"; */
+
+}
+
+    /* Login */
+    submitButton.addEventListener("click", function () {
+        console.log("validando");
+
+        const userValue = userInput.value;
+        const passwordValue = password.value;
+
+        if ((userValue === correctUser) && (passwordValue===correctPassword)){
+            alert("Bienvenido");
+            document.getElementById("contenidoCompleto").style.display="block";
+            document.getElementById("loginForm").style.display="none";
+
+            setCookie("loggedIn", "true");
+
+        }else{
+            alert("Credenciales incorrectos");
+        }
+    })
+
+
+    /* submitButton.addEventListener("click", function () {
+
+        const userValue = userInput.value;
+        const passwordValue = password.value;
+
+        if ((userValue === correctUser) && (passwordValue===correctPassword)){
+            alert("Bienvenido");
+            document.getElementById("contenidoCompleto").style.display="block";
+            document.getElementById("loginForm").style.display="none";
+
+            setCookie("loggedIn", "true");
+
+        }else{
+            alert("Credenciales incorrectos")
+        }
+    }) */
+
+    
+
+    cerrarSesion.addEventListener("click", function (){
+        console.log("cerrando log");
+
+        deleteCookie("loggedIn");
+        document.getElementById("contenidoCompleto").style.display="none";
+        document.getElementById("loginForm").style.display="block";
+        
+
+
+    })
 
 
 

@@ -5,13 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Javascript</title>
-    <link href="../../img/favicon.ico" rel="icon" type="image/x-icon">
-    <link href="../../css/style.css" rel="stylesheet" type="text/css" />
-    <script defer src="../../js/functions.js" type="text/javascript"></script>
+    <link href="../../../img/favicon.ico" rel="icon" type="image/x-icon">
+    <link href="../../../css/style.css" rel="stylesheet" type="text/css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script defer src="../../js/login.js"></script>
-    <script defer src="../../js/script.js" type="text/javascript"></script>
+
+   
+
+    <script defer src="../../../js/deleteCookie.js" type="text/javascript"></script>
+    <script defer src="../../../js/getCookie.js" type="text/javascript"></script>
+    <script defer src="../../../js/setCookie.js" type="text/javascript"></script>
+    <script defer src="../../../js/login.js" type="text/javascript"></script>
+    <script defer src="./js/functions.js" type="text/javascript"></script>
+    <script defer src="./js/scripts.js" type="text/javascript"></script>
 </head>
 
 
@@ -20,6 +26,25 @@
 
     <!-------------------Login------------------>
 
+    <!-- <div class="form-container" id="loginForm">
+      <p class="title">Login</p>
+      <form class="form" >
+
+        <div class="input-group">
+          <label for="username">Usuario:</label>
+        <input type="text" id="username" name="username" value="usuario" required>
+        </div>
+
+        <div class="input-group">
+          <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" value="contraseña" required>
+        </div>
+
+        <input class="sign" type="button" value="Ingresar" id="logbutton"></input>
+
+      </form>
+    </div>
+ -->
     <div class="form-container" id="loginForm">
       <p class="title">Login</p>
       <form class="form" >
@@ -34,7 +59,7 @@
         <input type="password" id="password" name="password" value="contraseña" required>
         </div>
 
-        <input class="sign" type="button" value="Ingresar"></input>
+        <input id="submit" class="sign" type="button" value="Ingresar"></input>
         <!--<button class="sign">Sign in</button>-->
 
       </form>
@@ -46,7 +71,7 @@
       <div class="row">
 
         <div class="col-12 col-md-4">
-          <img src="../../img/js.png" class="img-thumbnail imagen" alt="Js">
+          <img src="../../../img/js.png" class="img-thumbnail imagen" alt="Js">
         </div>
 
         <div class="titulo col-12 col-md-4">
@@ -55,8 +80,10 @@
         </div>
 
         <div class="col col-12-md-4">
-          <img src="../../img/photo.jpg" class="img-thumbnail imagen" alt="Foto de perfil">
+          <img src="../../../img/photo.jpg" class="img-thumbnail imagen" alt="Foto de perfil">
         </div>
+
+        
 
       </div>
     </div>
@@ -69,7 +96,7 @@
 
       <div class="container-fluid">
 
-        <a class="navbar-brand text-light" href="../../index.html">Inicio</a>
+        <a class="navbar-brand text-light" href="../../../index.html">Inicio</a>
         <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -99,9 +126,13 @@
                 Actividades
               </a>
               <ul class="dropdown-menu desplegable">
-                <li><a class="dropdown-item" href="./index.html">Actividad 1</a></li>
-                <li><a class="dropdown-item" href="../ejercicio02/index.html">Actividad 2</a></li>
+                <li><a class="dropdown-item" href="./index.html">Minicalculadora</a></li>
+                <li><a class="dropdown-item" href="../conversorbases/index.html">Conversor bases</a></li>
               </ul>
+            </li>
+
+            <li class="nav-item">
+              <button type="button" id="logout">Logout</button>
             </li>
 
           </ul>
@@ -123,12 +154,26 @@
       <div class="card">
           <!--<img src="..." class="card-img-top" alt="...">-->
           <div class="card-body">
-            <h5 class="card-title">Descripción del ejercicio 1</h5>
-            <button id="boton" type="button" class="btn btn-secondary">Púlsame</button>
-            <p class="card-text">Indicaciones del ejercicio 01</p>
-            <p class="card-text">Resultado:</p>
-            <p class="card-text" id="resultado" name="01" >(Aquí mostraremos el <strong>resultado</strong> del ejercicio 01)</p>
-            <a href="../../index.html" class="btn botEj">Página principal</a>
+            <h5 class="card-title">Minicalculadora</h5>
+            <form id="calculadora">
+              <input id="valor1" type="number" name="valor1">
+              <input id="valor2" type="number" name="valor2">
+
+              <input class="operador" id="sumar" type="button" name="sumar" value="+">
+              <input class="operador" id="restar" type="button" name="restar" value="-">
+              <input class="operador" id="multiplicar" type="button" name="multiplicar" value="x">
+              <input class="operador" id="dividir" type="button" name="dividir" value="/">
+              <input class="operador" id="resto" type="button" name="resto" value="%">
+              <input class="operador" id="factorial" type="button" name="factorial" value="!">
+              <input class="operador" id="entera" type="button" name="entero" value="_.">
+              <input class="operador" id="decimal" type="button" name="decimal" value="._">
+
+            </form>
+
+            <p class="card-text" >Resultado: <strong id="resultado"></strong></p>
+            <!-- <input id="resultado" type="number" name="resultado" value="0"> -->
+
+            <a href="../../../index.html" class="btn botEj">Página principal</a>
           </div>
       </div>
 
