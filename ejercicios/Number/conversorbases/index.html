@@ -33,6 +33,12 @@
 
   <!-------------------Header----------------->
   <div class="header container-fluid text-center">
+
+    <div class="logoutButton">
+      <a  id="logout">Logout</a>
+    </div>
+
+      
     <div class="row">
 
       <div class="col-12 col-md-4">
@@ -87,7 +93,7 @@
 
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Actividades
+              NUM
             </a>
             <ul class="dropdown-menu desplegable">
               <li><a class="dropdown-item" href="../../index.html" id="minicalculadora">Minicalculadora</a></li>
@@ -95,9 +101,6 @@
             </ul>
           </li>
 
-          <li class="nav-item">
-            <button type="button" id="logout">Logout</button>
-          </li>
 
         </ul>
       </div>
@@ -121,9 +124,9 @@
           <form id="calculadora">
             <input id="valor" type="number" name="valor">
 
-            <input id="binario" type="button" name="binario" value="/2">
-            <input id="octal" type="button" name="octal" value="/8">
-            <input id="hexadecimal" type="button" name="hexadecimal" value="/16">
+            <input class="operador" id="binario" type="button" name="binario" value="/2">
+            <input class="operador" id="octal" type="button" name="octal" value="/8">
+            <input class="operador" id="hexadecimal" type="button" name="hexadecimal" value="/16">
           </form>
 
           <p class="card-text" >Resultado: <strong id="resultado"></strong></p>

@@ -12,7 +12,7 @@ function deleteCookie(name){
         let cookie = cookieString[i].split("=");
 
         if(decodeURIComponent(cookie[0]) == name){
-            console.log(cookie[1]);
+
             document.cookie = encodeURIComponent(name) + "=;expires=" + theDate.toUTCString() + ";path=/;SameSite=Strict;Secure";
         }
     }

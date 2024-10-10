@@ -8,7 +8,7 @@ if ( !(cookieActual ==="true")){
     let posLogin = rutaBase.indexOf("DWECRepositorie");
     let rutaLogin = rutaBase.slice(0, posLogin + 1);
     const rutaDestino  = (rutaLogin).join('/') + '/index.html';
-    console.log(rutaDestino);
+
     window.location.href = rutaDestino; 
     
 

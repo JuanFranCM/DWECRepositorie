@@ -12,6 +12,8 @@
 
  
   }
+
+
   
   .title {
     text-align: center;
@@ -97,6 +99,21 @@
     color: white !important;
 }
 
+.logoutButton{
+  position: absolute ;
+  top: 10px ;
+  right: 10px ;
+  width: fit-content ;
+  height: fit-content ;
+  padding: 5px 10px ;
+  border-radius: 5px ;
+  cursor: pointer ;
+  background-color: #4B476B;
+}
+.logout{
+  color: #f7e759 !important;
+  background-color: #4B476B !important;
+}
 
 
 /************************Body*************************/
@@ -117,10 +134,11 @@
 
 body{
     background-color: #a5a2a5 !important;
+
 }
 
 .botEj{
-    background-color: #1E171F !important;
+    background-color: #362938 !important;
     color: #f7e759 !important;
 }
 
@@ -135,6 +153,30 @@ body{
     padding: 10px;
     color: #f7e759;
     
+}
+
+
+
+/***********************NUM***************************/
+.operador {
+  width: 50px; /* Ajusta el ancho de los botones */
+  height: 50px; /* Ajusta la altura de los botones */
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 50px; /* Centra el texto verticalmente */
+  background-color: #4B476B;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+  color: #f7e759;
+
+  /* Efecto al pasar el ratón */
+  &:hover {
+    background-color: #1E171F;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  }
 }
 
 

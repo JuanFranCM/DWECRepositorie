@@ -35,6 +35,11 @@
   
   <!-------------------Header----------------->
   <div class="header container-fluid text-center">
+
+    <div class="logoutButton">
+      <a  id="logout">Logout</a>
+    </div>
+
     <div class="row">
 
       <div class="col-12 col-md-4">
@@ -90,16 +95,12 @@
 
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Actividades
+              NUM
             </a>
             <ul class="dropdown-menu desplegable">
               <li><a class="dropdown-item" href="../../index.html" id="minicalculadora">Minicalculadora</a></li>
               <li><a class="dropdown-item" href="../../index.html" id="conversorbases">Conversor bases</a></li>
             </ul>
-          </li>
-
-          <li class="nav-item">
-            <button type="button" id="logout">Logout</button>
           </li>
 
         </ul>
@@ -122,17 +123,23 @@
         <div class="card-body">
           <h5 class="card-title">Minicalculadora</h5>
           <form id="calculadora">
-            <input id="valor1" type="number" name="valor1">
-            <input id="valor2" type="number" name="valor2">
 
-            <input class="operador" id="sumar" type="button" name="sumar" value="+">
-            <input class="operador" id="restar" type="button" name="restar" value="-">
-            <input class="operador" id="multiplicar" type="button" name="multiplicar" value="x">
-            <input class="operador" id="dividir" type="button" name="dividir" value="/">
-            <input class="operador" id="resto" type="button" name="resto" value="%">
-            <input class="operador" id="factorial" type="button" name="factorial" value="!">
-            <input class="operador" id="entera" type="button" name="entero" value="_.">
-            <input class="operador" id="decimal" type="button" name="decimal" value="._">
+            <div class="container-fluid text-center p-2">
+              <input id="valor1" type="number" name="valor1">
+              <input id="valor2" type="number" name="valor2">
+            </div>
+
+            <div class="container-fluid text-center p-2">
+              <input class="operador" id="sumar" type="button" name="sumar" value="+">
+              <input class="operador" id="restar" type="button" name="restar" value="-">
+              <input class="operador" id="multiplicar" type="button" name="multiplicar" value="x">
+              <input class="operador" id="dividir" type="button" name="dividir" value="/">
+              <input class="operador" id="resto" type="button" name="resto" value="%">
+              <input class="operador" id="factorial" type="button" name="factorial" value="!">
+              <input class="operador" id="entera" type="button" name="entero" value="_.">
+              <input class="operador" id="decimal" type="button" name="decimal" value="._">
+            </div>
+
 
           </form>
 
