@@ -61,24 +61,24 @@ submitButton.addEventListener("click", function () {
 
 
 
-        setCookie("loggedIn", "true");
+      setCookie("loggedIn", "true");
 
-        loginMessage.style.color = "green";
-        loginMessage.innerText = "Bienvenido";
+      loginMessage.style.color = "green";
+      loginMessage.innerText = "Bienvenido";
 
 
-        userInput.disabled = true;
-        passwordInput.disabled = true;
-        submitButton.disabled = true;
+      userInput.disabled = true;
+      passwordInput.disabled = true;
+      submitButton.disabled = true;
 
-        setTimeout(function () {
-            window.location.href = "./ejercicios/index.html"; 
-        }, 2000);
+      setTimeout(function () {
+          window.location.href = "./ejercicios/index.html"; 
+      }, 2000);
 
 
     }else{
-        loginMessage.style.color = "red";
-        loginMessage.innerText = "Credenciales incorrectas";
+      loginMessage.style.color = "red";
+      loginMessage.innerText = "Credenciales incorrectas";
     }
 })
 

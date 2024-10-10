@@ -6,6 +6,7 @@ function loadExercise(exercise) {
     case 'minicalculadora':
         mainContent.innerHTML = 
         `<div class="card">
+            
             <div class="card-body">
                 <h5 class="card-title">Mini Calculadora</h5>
                 <p class="card-text">Calculo</p>
