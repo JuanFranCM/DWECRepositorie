@@ -16,6 +16,5 @@ function deleteCookie(name){
             document.cookie = encodeURIComponent(name) + "=;expires=" + theDate.toUTCString() + ";path=/;SameSite=Strict;Secure";
         }
     }
-}
 
-/* window.location.href="" */
+}

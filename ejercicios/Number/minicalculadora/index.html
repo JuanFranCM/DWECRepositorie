@@ -10,188 +10,152 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-   
+    
+    <script defer src="../../../js/getCookie.js" type="text/javascript"></script>
+    <script defer src="../../../js/cookie.js" type="text/javascript"></script>
 
     <script defer src="../../../js/deleteCookie.js" type="text/javascript"></script>
-    <script defer src="../../../js/getCookie.js" type="text/javascript"></script>
+
+    <script defer src="../../js/loadExercise.js" type="text/javascript"></script>
+    <script defer src="../../js/script.js" type="text/javascript"></script>
+
     <script defer src="../../../js/setCookie.js" type="text/javascript"></script>
-    <script defer src="../../../js/login.js" type="text/javascript"></script>
     <script defer src="./js/functions.js" type="text/javascript"></script>
     <script defer src="./js/scripts.js" type="text/javascript"></script>
+    
+
+
+    <script defer src="../../../js/logout.js" type="text/javascript"></script>
 </head>
 
 
 <body>
 
 
-    <!-------------------Login------------------>
+  
+  <!-------------------Header----------------->
+  <div class="header container-fluid text-center">
+    <div class="row">
 
-    <!-- <div class="form-container" id="loginForm">
-      <p class="title">Login</p>
-      <form class="form" >
-
-        <div class="input-group">
-          <label for="username">Usuario:</label>
-        <input type="text" id="username" name="username" value="usuario" required>
-        </div>
-
-        <div class="input-group">
-          <label for="password">Contraseña:</label>
-        <input type="password" id="password" name="password" value="contraseña" required>
-        </div>
-
-        <input class="sign" type="button" value="Ingresar" id="logbutton"></input>
-
-      </form>
-    </div>
- -->
-    <div class="form-container" id="loginForm">
-      <p class="title">Login</p>
-      <form class="form" >
-
-        <div class="input-group">
-          <label for="username">Usuario:</label>
-        <input type="text" id="username" name="username" value="usuario" required>
-        </div>
-
-        <div class="input-group">
-          <label for="password">Contraseña:</label>
-        <input type="password" id="password" name="password" value="contraseña" required>
-        </div>
-
-        <input id="submit" class="sign" type="button" value="Ingresar"></input>
-        <!--<button class="sign">Sign in</button>-->
-
-      </form>
-    </div>
-
-  <div id="contenidoCompleto">
-    <!-------------------Header----------------->
-    <div class="header container-fluid text-center">
-      <div class="row">
-
-        <div class="col-12 col-md-4">
-          <img src="../../../img/js.png" class="img-thumbnail imagen" alt="Js">
-        </div>
-
-        <div class="titulo col-12 col-md-4">
-          <h3>Fundamentos de JS</h3>
-          <h4>Desarrollo WEB en entorno del cliente</h4>
-        </div>
-
-        <div class="col col-12-md-4">
-          <img src="../../../img/photo.jpg" class="img-thumbnail imagen" alt="Foto de perfil">
-        </div>
-
-        
-
-      </div>
-    </div>
-
-
-
-    <!------------------Navbar-------------------->
-
-    <nav class="navbar navbar-expand-lg">
-
-      <div class="container-fluid">
-
-        <a class="navbar-brand text-light" href="../../../index.html">Inicio</a>
-        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="https://www.w3schools.com/js/default.asp">W3Schools</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link active" href="https://es.javascript.info/js">Javascript.info</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="https://developer.mozilla.org/es/docs/Web/JavaScript">MDN</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="https://github.com/JuanFranCM/DWECRepositorie">GitHub</a>
-            </li>
-
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Actividades
-              </a>
-              <ul class="dropdown-menu desplegable">
-                <li><a class="dropdown-item" href="./index.html">Minicalculadora</a></li>
-                <li><a class="dropdown-item" href="../conversorbases/index.html">Conversor bases</a></li>
-              </ul>
-            </li>
-
-            <li class="nav-item">
-              <button type="button" id="logout">Logout</button>
-            </li>
-
-          </ul>
-        </div>
-
-
+      <div class="col-12 col-md-4">
+        <img src="../../../img/js.png" class="img-thumbnail imagen" alt="Js">
       </div>
 
-    </nav>
-
-
-
-
-    <!------------------Main content------------->
-
-    <div class="container" id="mainContent">
-
-
-      <div class="card">
-          <!--<img src="..." class="card-img-top" alt="...">-->
-          <div class="card-body">
-            <h5 class="card-title">Minicalculadora</h5>
-            <form id="calculadora">
-              <input id="valor1" type="number" name="valor1">
-              <input id="valor2" type="number" name="valor2">
-
-              <input class="operador" id="sumar" type="button" name="sumar" value="+">
-              <input class="operador" id="restar" type="button" name="restar" value="-">
-              <input class="operador" id="multiplicar" type="button" name="multiplicar" value="x">
-              <input class="operador" id="dividir" type="button" name="dividir" value="/">
-              <input class="operador" id="resto" type="button" name="resto" value="%">
-              <input class="operador" id="factorial" type="button" name="factorial" value="!">
-              <input class="operador" id="entera" type="button" name="entero" value="_.">
-              <input class="operador" id="decimal" type="button" name="decimal" value="._">
-
-            </form>
-
-            <p class="card-text" >Resultado: <strong id="resultado"></strong></p>
-            <!-- <input id="resultado" type="number" name="resultado" value="0"> -->
-
-            <a href="../../../index.html" class="btn botEj">Página principal</a>
-          </div>
+      <div class="titulo col-12 col-md-4">
+        <h3>Fundamentos de JS</h3>
+        <h4>Desarrollo WEB en entorno del cliente</h4>
       </div>
 
-    </div>
-
+      <div class="col col-12-md-4">
+        <img src="../../../img/photo.jpg" class="img-thumbnail imagen" alt="Foto de perfil">
+      </div>
 
       
 
+    </div>
+  </div>
 
 
 
-    <!----------------Footer-------------------->
+  <!------------------Navbar-------------------->
 
-    <div class="footer">
-        ©Juan Francisco Chacón Macías
+  <nav class="navbar navbar-expand-lg">
+
+    <div class="container-fluid">
+
+      <a class="navbar-brand text-light" href="../../index.html">Inicio</a>
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="https://www.w3schools.com/js/default.asp">W3Schools</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" href="https://es.javascript.info/js">Javascript.info</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="https://developer.mozilla.org/es/docs/Web/JavaScript">MDN</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="https://github.com/JuanFranCM/DWECRepositorie">GitHub</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Actividades
+            </a>
+            <ul class="dropdown-menu desplegable">
+              <li><a class="dropdown-item" href="../../index.html" id="minicalculadora">Minicalculadora</a></li>
+              <li><a class="dropdown-item" href="../../index.html" id="conversorbases">Conversor bases</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <button type="button" id="logout">Logout</button>
+          </li>
+
+        </ul>
+      </div>
+
+
+    </div>
+
+  </nav>
+
+
+
+
+  <!------------------Main content------------->
+
+  <div class="container" id="mainContent">
+
+
+    <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Minicalculadora</h5>
+          <form id="calculadora">
+            <input id="valor1" type="number" name="valor1">
+            <input id="valor2" type="number" name="valor2">
+
+            <input class="operador" id="sumar" type="button" name="sumar" value="+">
+            <input class="operador" id="restar" type="button" name="restar" value="-">
+            <input class="operador" id="multiplicar" type="button" name="multiplicar" value="x">
+            <input class="operador" id="dividir" type="button" name="dividir" value="/">
+            <input class="operador" id="resto" type="button" name="resto" value="%">
+            <input class="operador" id="factorial" type="button" name="factorial" value="!">
+            <input class="operador" id="entera" type="button" name="entero" value="_.">
+            <input class="operador" id="decimal" type="button" name="decimal" value="._">
+
+          </form>
+
+          <p class="card-text" >Resultado: <strong id="resultado"></strong></p>
+
+          <a href="../../../index.html" class="btn botEj">Página principal</a>
+        </div>
     </div>
 
   </div>
+
+
+    
+
+
+
+
+  <!----------------Footer-------------------->
+
+  <div class="footer">
+    ©Juan Francisco Chacón Macías
+  </div>
+
     
 </body>
 </html>
