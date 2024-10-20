@@ -28,5 +28,30 @@ function loadExercise(exercise) {
         </div>`
         break;
 
+
+    case 'modText':
+      mainContent.innerHTML = 
+        `<div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Modificador de texto</h5>
+                <p class="card-text">Cambio lower/upper Case</p>
+                <a href="./String/modText/index.html" class="btn botEj">Solución</a>
+            </div>
+        </div>`
+        break;
+
+
+
+    case 'modTextAPI':
+      mainContent.innerHTML = 
+        `<div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Modificador de texto con API</h5>
+                <p class="card-text">Mod text junto con uso de API</p>
+                <a href="./String/modTextApi/index.html" class="btn botEj">Solución</a>
+            </div>
+        </div>`
+        break;
+
   }
 }

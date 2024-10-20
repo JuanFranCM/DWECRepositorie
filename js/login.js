@@ -8,7 +8,7 @@ const loginMessage = document.getElementById("loginMessage");
 const userInput = document.getElementById("username");
 const passwordInput = document.getElementById("password");
 const submitButton = document.getElementById("submit");
-const cookieActual = getCookieFor("loggedIn");
+
 
 /**** Control de valores de login *****/
 
@@ -61,7 +61,7 @@ submitButton.addEventListener("click", function () {
 
 
 
-      setCookie("loggedIn", "true");
+      setLocalStorage("loggedIn", "true");
 
       loginMessage.style.color = "green";
       loginMessage.innerText = "Bienvenido";

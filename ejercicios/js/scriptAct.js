@@ -1,11 +1,7 @@
-/*****************Scripts para minicalculadora*******************/
+"use strict"
+/*****************Script minicalculadora y String modText y modTextAPI*******************/
 
-/**
- * valores HTML
- */
-const valor1 = document.getElementById("valor1");
-const valor2 = document.getElementById("valor2");
-const resultado = document.getElementById("resultado")
+
 
 /**
  * Botones de acción

@@ -3,6 +3,42 @@
 
 /*********Functions para minicalculadora*******/
 
+
+
+function selectorOperador (operador) {
+    /**
+    * valores HTML
+    */
+    const valor1 = document.getElementById("valor1");
+    const valor2 = document.getElementById("valor2");
+    const resultado = document.getElementById("resultado");
+
+    const id = operador.id;
+    let resultadoActual = Number(resultado.textContent);
+
+
+    if (!((id == "entera")||(id=="decimal"))){
+        resultado.innerHTML = `${(operar(parseFloat(valor1.value), parseFloat(valor2.value), id)).toFixed(5)}`;
+
+        return;
+    }
+
+
+    if (id == "entera"){
+        valor1.value = `${operar(parseFloat(resultadoActual), parseFloat(0), id)}`;
+        return;
+    }
+
+
+    if (id=="decimal"){
+        valor2.value = `${operar(parseFloat(resultadoActual), parseFloat(0), id)}`;
+        return;
+    }
+}
+
+
+
+
 function operar(a, b, operacion){
 
     let resultado = 0;
@@ -50,27 +86,4 @@ function operar(a, b, operacion){
 }
 
 
-function selectorOperador (operador) {
 
-    const id = operador.id;
-    let resultadoActual = Number(resultado.textContent);
-
-
-    if (!((id == "entera")||(id=="decimal"))){
-        resultado.innerHTML = `${(operar(parseFloat(valor1.value), parseFloat(valor2.value), id)).toFixed(5)}`;
-
-        return;
-    }
-
-
-    if (id == "entera"){
-        valor1.value = `${operar(parseFloat(resultadoActual), parseFloat(0), id)}`;
-        return;
-    }
-
-
-    if (id=="decimal"){
-        valor2.value = `${operar(parseFloat(resultadoActual), parseFloat(0), id)}`;
-        return;
-    }
-}

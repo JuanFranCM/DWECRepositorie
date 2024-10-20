@@ -1,8 +1,8 @@
 "use strict"
 
-const cookieActual = getCookieFor("loggedIn");
+const loggedIn = getLocalStorage("loggedIn")
 
-if ( !(cookieActual ==="true")){
+if ( !(loggedIn ==="true")){
 
     const rutaBase =window.location.pathname.split('/');
     let posLogin = rutaBase.indexOf("DWECRepositorie");
