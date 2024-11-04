@@ -231,3 +231,75 @@
 <p>Al pulsar el botón de logout, se elimina el valor de loggedIn y se recarga la página actual, de esta forma entra en acción localStorage.js y este te redirecciona a la página del login. Al realizarlo de esta forma, evito escribir dos veces la redirección al login como ocurría en cookies</p>
 
 
+
+<h1>E06 IndexedDb con array</h1>
+
+<h2>IndexedDB</h2>
+<p>Para esta entrega, he reformulado los archivos anteriores de validación y almacenaje aplicando el uso de indexedDB</p>
+<h3>indexDB.js</h3>
+<img src="./img/imgReadme/E06I01.png">
+<p>La principal diferencia al usar indexedDB es que debemos realizar las funciones de forma asíncrona usando promesas. Esto se debe a que tarda unos breves instantes en iniciarse, lo cual produce fallos a la hora de realizar comprobaciones instantáneas sobre si existe o no un campo en la base de datos(loggedIn en este caso)</p>
+
+<p>En el caso de indexDB hacemos que al llamar a la función de abrir la base de datos se devuelva una promesa, produciendose la apertura de forma asíncrona</p>
+
+<p>A la hora de volver a abrir la base de datos abierta desde otra pestaña, se comrpueba si existe la base de datos dentro de este espacio de memoria, y en caso de no existir se crea.
+
+<h3>getIndexDB.js</h3>
+<img src="./img/imgReadme/E06I02.png">
+<p>En el caso de getIndexDB, esta función es asíncrona ya que espera a la creación o apertura previa de la base de datos, en caso de abrirse corectamente, buscamos el valor y lo devolvemos en caso de encontrarlo, y en caso contrario devolvemos null.
+
+<h3>deleteIndexDB.js</h3>
+<img src="./img/imgReadme/E06I03.png">
+<p>Para eliminar un valor de una clave especificada de la base de datos no requerimos que sea asíncrona ya que este caso solo va a tener lugar cuando pulsemos el botón de logout, lo cual da tiempo suficiente al sistema a abrir la base de datos</p>
+
+<h3>setIndexDB.js</h3>
+<img src="./img/imgReadme/E06I04.png">
+<p>Parecido a delete, como para crear par clave:valor sería necesario hacer login, no es necesario hacerla asíncrona</p>
+
+<h3>logout.js</h3>
+<img src="./img/imgReadme/E06I05.png">
+<p>En el logout he agregado la función que comprueba al entrar en una página si la clave:valor loggedIn:true existe, y para ello debemos hacerla asíncrona, ya que depende de una función(getIndexDB) que a su vez depende de la apertura de la base de datos</p>
+
+<h3>login.js</h3>
+<img src="./img/imgReadme/E06I06.png">
+<p>En el caso del login solo cambiamos a setIndexDB a la hora de validar credenciales</p>
+
+<h2>Array</h2>
+<img src="./img/imgReadme/E06I13.png">
+<p>En la parte de arrays las hemos empleado para realizar operaciones de sumar, restar y multiplicar matrices</p>
+
+
+<h3>index.html</h3>
+<img src="./img/imgReadme/E06I07.png">
+
+<p>Hacemos una estructura inicial de tablas para mostrar el resultado de manera más ordenada</p>
+
+
+
+<h3>script.js</h3>
+<img src="./img/imgReadme/E06I08.png">
+<p>Partiendo de que comparte como los otros ejercicios el arrays con el conjunto de botones en el mismo script común ya mostrado anteriormente,  creamos la función a la que este script común llama, selectorOperador.</p>
+<p>Desde ESte seleccionamos si la operación a realizar será una operación matemática, o crear la matriz a y b.</p>
+
+
+<h3>functions.js</h3>
+<h4>CrearMatriz y rellenarMatriz</h2>
+<img src="./img/imgReadme/E06I09.png">
+<p>En la primera función, crear Matriz, se establece el tamaño que hemos especificado para la matriz, inicializando en nulo cada una de sus posiciones.</p>
+
+<p>En rellenarMatriz damos a cada una de las posiciones un valor entre 10 y 100(si incluir) </p>
+
+
+<h4>valorAleatorio y mostrarMatriz</h2>
+<img src="./img/imgReadme/E06I10.png">
+<p>Obviando valorAleatorio usado ya en prácticas anteriores, mostrar matriz se encarga de que la matriz creada anteriormente se muestre en formato html en la página web, para ello pasamos cada uno de los valores a textNode, estos a un elemento que corresponderá a las columnas, y a su vez este formará parte de las filas correspondientes.</p>
+
+
+<h4>SumarMatrices y restarMatrices</h2>
+<img src="./img/imgReadme/E06I11.png">
+<p>Obviando la función de operar(id) que es igual que en actividades anteriores, ambas funciones funcionan de la misma forma pero restando o sumando en cada caso, con dos bucles for uno dentro de otro nos vamos a cada elemento de cada matriz en la misma posición y lo sumamos o restamos según corresponda.</p>
+
+
+<h4>MultiplicarMatriz</h2>
+<img src="./img/imgReadme/E06I12.png">
+<p>En este caso en vez de coger la misma posición simultánea, vamos iterando la fila/columna en común con la variable k, sumando el valor de cada multiplicación al valor anterior en la misma posición de la matriz final, de esta forma se suman consecutivos números hasta cambiar la línea en común k.</p>

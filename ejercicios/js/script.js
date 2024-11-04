@@ -18,4 +18,10 @@ document.getElementById("modText").addEventListener("click", function () {
 document.getElementById("modTextAPI").addEventListener("click", function () {
     loadExercise('modTextAPI');
 });
+
+
+// Manejar la selección de los ejercicios del menú "String"
+document.getElementById("matrices").addEventListener("click", function () {
+    loadExercise('matrices');
+});
  

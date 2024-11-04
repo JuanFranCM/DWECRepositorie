@@ -61,7 +61,7 @@ submitButton.addEventListener("click", function () {
 
 
 
-      setLocalStorage("loggedIn", "true");
+      setIndexedDB("loggedIn", "true");
 
       loginMessage.style.color = "green";
       loginMessage.innerText = "Bienvenido";

@@ -53,5 +53,18 @@ function loadExercise(exercise) {
         </div>`
         break;
 
+
+    case 'matrices':
+        console.log("matrices");
+        mainContent.innerHTML = 
+            `<div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Matrices</h5>
+                    <p class="card-text">Uso de arrays para operaciones con matrices</p>
+                    <a href="./Array/Matrices/index.html" class="btn botEj">Solución</a>
+                </div>
+            </div>`
+            break;
+
   }
 }
