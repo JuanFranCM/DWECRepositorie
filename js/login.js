@@ -61,7 +61,7 @@ submitButton.addEventListener("click", function () {
 
 
 
-      setIndexedDB("loggedIn", "true");
+      setLocalStorage("loggedIn", "true");
 
       loginMessage.style.color = "green";
       loginMessage.innerText = "Bienvenido";
@@ -99,6 +99,8 @@ window.addEventListener('popstate', function () {
 
 
     
+
+
 
 
 
