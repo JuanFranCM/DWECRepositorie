@@ -303,3 +303,80 @@
 <h4>MultiplicarMatriz</h2>
 <img src="./img/imgReadme/E06I12.png">
 <p>En este caso en vez de coger la misma posición simultánea, vamos iterando la fila/columna en común con la variable k, sumando el valor de cada multiplicación al valor anterior en la misma posición de la matriz final, de esta forma se suman consecutivos números hasta cambiar la línea en común k.</p>
+
+
+<h1>E07 Crud</h1>
+<p>Para esta entrega, hemos vuelto a localStorage como administrador de sesión, y he arreglado un problema que existía con el botón de logout en todas las versiones anteriores</p>
+
+<h2>Crud con cookies</h2>
+<img src="./img/imgReadme/E07I0100.png">
+<p>Solo funcional en firefox. No visible el funcionamiento porque existe un problema con indexDB, localStorage y sessionStorage en firefox que no me permite el acceso mediante login a la página que no he sabido solucionar aún, pero pude comprobar el funcionamiento aislando este apartado</p>
+<h3>script.js común entre cookies, localStorage y sessionStorage</h3>
+<img src="./img/imgReadme/E07I0101.png">
+<p>Tanto para cookies, localStorage y sessionStorage se usa este mismo script común para manejar el mostrado y el guardado de datos</p>
+
+
+<h2>Crud con localStorage</h2>
+<img src="./img/imgReadme/E07I0200.png">
+<p>Podemos guardar pares nombre:valor en localStorage mediante esta aplicación. Luego los datos almacenados se muestran en el apartado inferior con la posibilidad de borrar el par almacenado, o de cargarlo en la barra superior para modificar el nombre o el valor asignado</p>
+
+<h3>LocalStorage grabarDato.js</h3>
+<img src="./img/imgReadme/E07I0201.png">
+<p>Para grabar los datos usamos una función que en caso de no estar alguno de los valores vacíos, lo guarda como Item en el localStorage como un par nombre:valor</p>
+
+
+<h3>LocalStorage borrarDato.js</h3>
+<img src="./img/imgReadme/E07I0202.png">
+<p>Para borrar los datos, se copia el conjunto de entradas menos la que queremos eliminar en una variable y luego sustituimos el localStorage por la nueva variable que hemos creado</p>
+
+
+<h3>LocalStorage mostrarDato.js</h3>
+<img src="./img/imgReadme/E07I0203.png">
+<p>Mediante un foreach, formamos el conjunto del bloque html que tendrá cada entrada de datos en varios pasos.</p>
+<p>En primer lugar creamos los elementos que lo formarán, usando etiquetas de una tabla(tr línea, td las columnas). Las diferentes columnas que tendrá serán el nombre, el valor, y los botones que nos permitirán eliminar o modificar dicha entrada</p>
+
+<p>Además a los campos de nombre y valor asignamos los valores de cada entrada correspondientes</p>
+
+<img src="./img/imgReadme/E07I0204.png">
+<p>En segundo lugar crearemos el conjunto de los dos botones, dándole a cada uno el texto que mostrarán, una imagen que acompañará el texto, el evento Listener cuando se pulse y la acción que cada botón desempeñará al pulsar dichos botones</p>
+
+<p>Finalmente introducimos todos los elementos en la variable linea, y a su vez introducimos esta en el elemento del html con el id "cuerpo" al que hemos identificado al comienzo del archivo js con un getElementById. En caso de no existir datos se muestra en este espacio el texto "no existen datos almacenados"</p>
+
+<h2>Crud con SessionStorage</h2>
+<img src="./img/imgReadme/E07I0300.png">
+<p>Estructura exactamente igual que LocalStorage, cambiando localStorage por sessionStorage en el código. Su funcionamiento es exactamente igual pero no se mantiene entre sesiones.</p>
+
+<h2>Crud con IndexedDB + API</h2>
+<img src="./img/imgReadme/E07I0400.png">
+<p>En este apartado hemos implementado el mismo funcionamiento con indexedDB, y además poder introducir datos mediante una API</p>
+
+<h3>IndexedDB script.js</h3>
+<img src="./img/imgReadme/E07I0401.png">
+<p>Este apartado tiene su script aparte ya que requiere de abrir la base de datos antes de poder funcionar.</p>
+
+<p>En primer lugar abrimos la base de datos igual que lo hacíamos en la entrega anterior, y creamos tres campos, el nombre, el valor, y una imagen, los tres serán en formato texto. Una vez abierta se solicitará mostrar los datos que ya haya almacenados anteriormente</p>
+
+<img src="./img/imgReadme/E07I0402.png">
+<p>A continuación localizamos los elementos que aportaran la información para nuestros registros, y al pulsar el botón guardar enviamos estos datos a la función grabarDato. En caso de que la imagen no haya sido asignada, le asignará automáticamente una imagen por defecto almacenada. Para el resto de valores no permitirá que estén en blanco y nos notificará con una alerta en caso de hacerlo</p>
+<p>Por otra parte tenemos los botones relacionados con la API para solicitar 1 entrada o 5, siendo la única diferencia que el de 5 llama 5 veces a la función de obtener usuario. Esta función solicitará a la función obtener Usuario que obtenga los datos mediante la API y los asigne a un nuevo usuario de forma asíncrona.</p>
+<p>Estas funciones deben ser asíncronas para que esperen el resultado de respuesta de la API, si no nos notificaría un error al intentar obtener los datos de la API para asignarlos cuando no existen aún</p>
+
+<h3>IndexedDB grabarDato.js</h3>
+<img src="./img/imgReadme/E07I0403.png">
+<p>Este apartado guarda los tres valores recibidos en los campos correspondientes de la base de datos, lanzando un alert si se intenta introducir un nombre o valor vacíos.</p>
+
+<h3>IndexedDB borrarDato.js</h3>
+<img src="./img/imgReadme/E07I0404.png">
+<p>Este apartado borra una fila de la columna seleccionada mediante su id, eliminando directamente esta fila de datos y no realizando una copia como en local/sessionStorage</p>
+
+<h3>IndexedDB mostrarDatos.js</h3>
+<img src="./img/imgReadme/E07I0405.png">
+<p>Mostrar datos de este apartado funciona exactamente igual que el de los anteriores, cambiando únicamente que existe un campo más referente a la imagen que no existe en los ejercicios anteriores y que está hecho con un for en vez de un foreach.</p>
+
+<img src="./img/imgReadme/E07I0406.png">
+<p>Al querer actualizar un registro de la base de datos, cargamos sus datos en la barra de creación superior y eliminamos el registro existente de la base de datos</p>
+
+<h3>IndexedDB api.js</h3>
+<img src="./img/imgReadme/E07I0407.png">
+<p>El funcionamiento de esta api es muy simple. Teniendo esta api de Rick y Morty 826 personajes, generamos un número aleatorio entre 1 y el máximo para obtener un número aletorio. Después de obtener un json con la respuesta, nos quedamos con los apartados name, species y image de este json y los registramos mediante la función grabarDato()</p>
+

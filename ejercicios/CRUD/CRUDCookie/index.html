@@ -14,9 +14,12 @@
   <script defer src="../../../js/localStorage.js" type="text/javascript"></script>
   <script defer src="../../../js/deleteLocalStorage.js" type="text/javascript"></script>
   <script defer src="../../../js/setLocalStorage.js" type="text/javascript"></script>
+  
+  <script defer src="./js/mostrarDatos.js" type="text/javascript"></script>
+  <script defer src="./js/borrarDato.js" type="text/javascript"></script>
+  <script defer src="./js/grabarDato.js" type="text/javascript"></script>
+  <script defer src="../script.js" type="text/javascript"></script>
 
-  <script defer src="../js/functions.js" type="text/javascript"></script>
-  <script defer src="../../js/scriptAct.js" type="text/javascript"></script>
   
   <script defer src="../../../js/logout.js" type="text/javascript"></script>
 </head>
@@ -87,7 +90,6 @@
           </li>
 
 
-
         </ul>
       </div>
 
@@ -104,39 +106,43 @@
   <div class="container" id="mainContent">
 
 
-    <div class="card">
+    <div class="cardEj">
         <div class="card-body">
-          <h5 class="card-title">Modificador de texto</h5>
-          <form id="modText">
-
-            <div class="container-fluid text-center p-2" id="contText">
-              <!-- <input id="texto" type="text" name="texto"> -->
-              <textarea name="texto" id="texto" rows="5" cols="60"></textarea>
-            </div>
-
-            <div class="container-fluid text-center p-2">
-                <input class="operador" id="upperAll" type="button" name="upperAll" value="A-Z">
-                <input class="operador" id="lowerAll" type="button" name="lowerAll" value="a-z">
-                <input class="operador" id="upperFirst" type="button" name="upperFirst" value="A_">
-                <input class="operador" id="upperLast" type="button" name="upperLast" value="_Z">
-                <input class="operador" id="lowerFirst" type="button" name="lowerFirst" value="a_">
-                <input class="operador" id="lowerLast" type="button" name="lowerLast" value="_z">
-                <input class="operador" id="upperVocal" type="button" name="upperVocal" value="AEIOU">
-                <input class="operador" id="minusVocal" type="button" name="minusVocal" value="aeiou">
-                <input class="operador" id="upperConst" type="button" name="upperConst" value="CONST">
-                <input class="operador" id="lowerConst" type="button" name="lowerConst" value="const">
-            </div>
-
-            <div class="container-fluid text-center p-2">
-                <input class="operador" id="random" type="button" name="random" value="Random">
-                <input class="operador" id="stop" type="button" name="stop" value="Parar">
-                <input class="operador" id="fast" type="button" name="fast" value="Rápido">
-                <input class="operador" id="slow" type="button" name="slow" value="Lento">
-
-            </div>
+          <h5 class="card-title">Crud con Cookies</h5>
 
 
-          </form>
+          <div class="cardBody">
+            <fieldset>
+              <legend>Guardar nombre y valor</legend>
+              <table id="tabla" class="filas">
+                <thead>
+                  <tr>
+                    <th><label name="labelNombre" for="nombre">Introduce un nombre</label></th>
+                    <th><label name="labelValor" for="valor">Introduce un valor</label></th>
+                  </tr>
+                  <tr>
+                    <th>
+                      <input type="text" id="nombre" class="control" name="nombre" size="20"
+                        placeholder="Escribe un nombre..." required />
+                    </th>
+                    <th>
+                      <input type="text" id="valor" class="control" name="valor" size="20"
+                        placeholder="Escribe un valor..." required />
+                    </th>
+                    <th>
+                      <button type="submit" id="guardar" class="operadorCrud"> Guardar
+                        <img src="./img/save.svg" alt="Guardar" width="22" height="22"
+                          style="vertical-align: middle" />
+                      </button>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody id="cuerpo">
+                </tbody>
+              </table>
+            </fieldset>
+          </div>
+               
 
 
           <a href="../../index.html" class="btn botEj">Página principal</a>

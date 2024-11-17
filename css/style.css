@@ -118,10 +118,14 @@
 
 /************************Body*************************/
 .card{
-    width: 80%;
+
     margin: 10px;
     padding: 10px;
+    display: flex !important;
+
 }
+
+
 
 
 .container{
@@ -129,9 +133,25 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 16px;
+    ;
 
 }
 
+
+.cardEj{
+  margin: 10px;
+  padding: 20px;
+  display: flex !important;
+  border-radius: 10px;
+  background-color: white
+}
+
+.conjuntoBtn{
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
 
 body{
     background-color: #a5a2a5 !important;
@@ -172,6 +192,31 @@ body{
   cursor: pointer;
   box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
   color: #f7e759;
+
+  /* Efecto al pasar el ratón */
+  &:hover {
+    background-color: #1E171F;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/********************Operador crud****************/
+.operadorCrud {
+  width: fit-content; /* Ajusta el ancho de los botones */
+  height: fit-content; /* Ajusta la altura de los botones */
+  max-height: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+
+  background-color: #4B476B;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+  color: #f7e759;
+
 
   /* Efecto al pasar el ratón */
   &:hover {

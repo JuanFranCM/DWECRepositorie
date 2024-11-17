@@ -66,5 +66,57 @@ function loadExercise(exercise) {
             </div>`
             break;
 
+
+
+    case 'crudCookie':
+        console.log("crudCookie");
+        mainContent.innerHTML = 
+            `<div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Crud con cookies</h5>
+                    <p class="card-text">Uso de cookies para manejo de crud</p>
+                    <a href="./CRUD/CRUDCookie/index.html" class="btn botEj">Solución</a>
+                </div>
+            </div>`
+            break;
+
+
+    case 'crudLocalStorage':
+        console.log("crudLocalStorage");
+        mainContent.innerHTML = 
+            `<div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Crud con localStorage</h5>
+                    <p class="card-text">Uso de localStorage para manejo de crud</p>
+                    <a href="./CRUD/CRUDLocalStorage/index.html" class="btn botEj">Solución</a>
+                </div>
+            </div>`
+            break;
+
+
+    case 'crudSessionStorage':
+        console.log("crudSessionStorage");
+        mainContent.innerHTML = 
+            `<div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Crud con SessionStorage</h5>
+                    <p class="card-text">Uso de SessionStorage para manejo de crud</p>
+                    <a href="./CRUD/CRUDSessionStorage/index.html" class="btn botEj">Solución</a>
+                </div>
+            </div>`
+            break;
+
+
+    case 'crudIndexedDB':
+        console.log("crudIndexedDB");
+        mainContent.innerHTML = 
+            `<div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Crud con indexedDB + API</h5>
+                    <p class="card-text">Uso de indexedDB para manejo de crud + uso de api</p>
+                    <a href="./CRUD/CRUDIndexedDB/index.html" class="btn botEj">Solución</a>
+                </div>
+            </div>`
+            break;
   }
 }

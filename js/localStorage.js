@@ -2,7 +2,7 @@
 
 const loggedIn = getLocalStorage("loggedIn")
 
-if ( !(loggedIn ==="true")){
+ if ( !(loggedIn ==="true")){
 
     const rutaBase =window.location.pathname.split('/');
     let posLogin = rutaBase.indexOf("ejercicios");
@@ -12,4 +12,4 @@ if ( !(loggedIn ==="true")){
     window.location.href = rutaDestino; 
     
 
-}
+} 

@@ -20,8 +20,25 @@ document.getElementById("modTextAPI").addEventListener("click", function () {
 });
 
 
-// Manejar la selección de los ejercicios del menú "String"
+// Manejar la selección de los ejercicios del menú "Array"
 document.getElementById("matrices").addEventListener("click", function () {
     loadExercise('matrices');
+});
+ 
+
+
+
+// Manejar la selección de los ejercicios del menú "CRUD"
+document.getElementById("crudCookie").addEventListener("click", function () {
+    loadExercise('crudCookie');
+});
+document.getElementById("crudLocalStorage").addEventListener("click", function () {
+    loadExercise('crudLocalStorage');
+});
+document.getElementById("crudSessionStorage").addEventListener("click", function () {
+    loadExercise('crudSessionStorage');
+});
+document.getElementById("crudIndexedDB").addEventListener("click", function () {
+    loadExercise('crudIndexedDB');
 });
  
