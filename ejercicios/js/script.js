@@ -42,3 +42,16 @@ document.getElementById("crudIndexedDB").addEventListener("click", function () {
     loadExercise('crudIndexedDB');
 });
  
+
+
+
+// Manejar la selección de los ejercicios del menú "Estructuras"
+document.getElementById("pila").addEventListener("click", function () {
+    loadExercise('pila');
+});
+document.getElementById("cola").addEventListener("click", function () {
+    loadExercise('cola');
+});
+document.getElementById("lista").addEventListener("click", function () {
+    loadExercise('lista');
+});

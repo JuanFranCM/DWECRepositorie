@@ -227,6 +227,50 @@ body{
 
 
 
+/*********************Estructura******************/
+.elemento{
+  width: 500px;
+  text-align: center;
+  padding: 15px 32px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 0px rgba(0, 0, 0,  0.2);
+  border-style: solid;
+  border-color: #4B476B;
+  margin: 20px;
+}
+
+.elementoLista{
+  width: 500px;
+  text-align: center;
+  padding: 15px 32px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 0px rgba(0, 0, 0,  0.2);
+  border-style: solid;
+  border-color: #4B476B;
+  margin: 20px;
+}
+
+
+#res div:nth-child(even){
+  background-color: gray;
+}
+
+#resLis div:nth-child(even){
+  background-color: gray;
+}
+
+#resLis div:hover{
+  cursor: pointer;
+  background-color: red;
+}
+
+#resPrior div:nth-child(even){
+  background-color: gray;
+}
+
+
+
+
 
 /****************Modificador de texto**************/
 #texto{

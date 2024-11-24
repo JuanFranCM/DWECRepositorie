@@ -118,5 +118,44 @@ function loadExercise(exercise) {
                 </div>
             </div>`
             break;
+
+
+    case 'pila':
+        console.log("pila");
+        mainContent.innerHTML = 
+            `<div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Gestión de la colada con una pila</h5>
+                    <p class="card-text">Gestión de la colada con una estructura de formato pila</p>
+                    <a href="./Estructuras/Pila/index.html" class="btn botEj">Solución</a>
+                </div>
+            </div>`
+            break;
+
+
+    case 'cola':
+        console.log("cola");
+        mainContent.innerHTML = 
+            `<div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Gestión de un taller con una cola</h5>
+                    <p class="card-text">Gestión de la cola de acceso a un taller con una estructura de formato cola</p>
+                    <a href="./Estructuras/Cola/index.html" class="btn botEj">Solución</a>
+                </div>
+            </div>`
+            break;
+
+
+    case 'lista':
+        console.log("lista");
+        mainContent.innerHTML = 
+            `<div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Gestión de tareas con una lista</h5>
+                    <p class="card-text">Gestión de tareas normales y prioritarias con una estructora de formato lista</p>
+                    <a href="./Estructuras/Lista/index.html" class="btn botEj">Solución</a>
+                </div>
+            </div>`
+            break;
   }
 }

@@ -380,3 +380,36 @@
 <img src="./img/imgReadme/E07I0407.png">
 <p>El funcionamiento de esta api es muy simple. Teniendo esta api de Rick y Morty 826 personajes, generamos un número aleatorio entre 1 y el máximo para obtener un número aletorio. Después de obtener un json con la respuesta, nos quedamos con los apartados name, species y image de este json y los registramos mediante la función grabarDato()</p>
 
+
+<h1>E08 Estructuras</h1>
+<p>Para esta entrega hemos creado varias actividades para trabajar con las estructuras de pila, cola y lista en estructura modularizada</p>
+
+<h2>Estructura de archivos</h2>
+<img src="./img/imgReadme/E08I05.png">
+<p>Los archivos se separan en una carpeta con los objetos Lista, y pila y cola que heredan de lista</p>
+<p>Por otro lado los módulos con los scripts de cada uno y el módulo de aleatorio</p>
+
+<h2>Pila</h2>
+<img src="./img/imgReadme/E08I01.png">
+<p>Esta actividad funciona mediante la estructura de pila mediante la ejemplificación con una colada. El último elemento en entrar es el primero en salir</p>
+<p>El archivo main capta los elementos mediante su id, genera el array con los posibles valores, y genera un objeto de clase Pila.</p>
+<p>ScriptPila se encarga de las funciones que realizan los botones y de llamar a las funciones de Pila correspondientes</p>
+<p>Finalmente el objeto pila usa las funciones de Lista, solo que utiliza las funciones enlistar y desenlistar en la posición 0 del array</p>
+<p>Se muestra en siguiente el siguiente elemento que se eliminará si pulsamos obtener</p>
+
+<h2>Cola</h2>
+<img src="./img/imgReadme/E08I02.png">
+<p>El modelo de cola está estructurado como una lista de espera de un taller de coches</p>
+<p>Al añadir elementos se añaden al final de la cola, y salen por el principio de esta. El funcionamiento es igual que el de Pila, pero al llamar a las funciones de lista cambiamos la posición por la que entran al enlistar</p>
+
+
+<h2>Lista Aleatoria</h2>
+<img src="./img/imgReadme/E08I03.png">
+<p>Se añaden a la lista tareas a realizar, al pulsar el botón de eliminar se eliminará uno aleatorio<p>
+<p>Además, podemos eliminar un elemento en concreto haciendo click en la tarea directamente (cambia el color al hacer hover como se muestra en la foto)</p>
+
+<h2>Lista Prior</h2>
+<img src="./img/imgReadme/E08I04.png">
+<p>Igual que lista aleatoria, pero al pulsar eliminar se elimina la tarea de mayor valor indicado a su izquierda, de 9 a 0, que es también la que se mostrará en el apartado de la siguiente tarea es:tarea</p>
+
+<p>Usamos el módulo de números aleatorios para generar items de cada tipo de forma aleatoria entre los datos del array indicado, o bien para eliminar aleatoriamente en Lista aleatoria</p>
